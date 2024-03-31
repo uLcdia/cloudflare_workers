@@ -1,0 +1,48 @@
+export default {
+    async fetch(request) {
+      const html = `<!DOCTYPE html>
+      <html>
+          <head>
+              <title>NVIDIA GeForce RTX 50 Series Release Date Revealed</title>
+              <meta property="og:title" content="NVIDIA GeForce RTX 50 Series Release Date Revealed">
+              <meta property="og:description" content="NVIDIA GeForce RTX 50 series reportedly features 28 Gbps GDDR7 memory and 512-bit bus.">
+              <meta property="og:image" content="https://tpucdn.com/img/xJCsoqyLi60ngbNY_thm.jpg">
+              <meta property="og:site_name" content="NVIDIA">
+              <meta name="twitter:card" content="summary_large_image">
+              <meta name="theme-color" content="#76B900">
+              <style>
+                  body {
+                      font-family: 'Source Sans Pro', sans-serif;
+                  }
+              </style>
+          </head>
+          <body>
+              <span>NVIDIA reveals GeForce RTX 50 series graphic cards release date. NVIDIA GeForce RTX 50 series reportedly features 28 Gbps GDDR7 memory and 512-bit bus. This is despite the fact that the first GDDR7 memory chips will be capable of 32 Gbps speeds. NVIDIA will also stick with 16 Gbit densities for the GDDR7 memory chips, which means memory sizes could remain largely unchanged for the next generation; with the 28 Gbps GDDR7 memory chips providing 55% higher bandwidth over 18 Gbps GDDR6 and 33% higher bandwidth than 21 Gbps GDDR6X.</span><br>
+              <span>Source: </span>  
+              <span id="nvidiaWebsite" style="color: blue; text-decoration: underline; cursor: pointer;">nvidia.com</span>
+              <script>
+                  document.getElementById('nvidiaWebsite').addEventListener('click', function() {
+                      const video = document.createElement('video');
+                      video.style.cssText = "display: block; position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%;";
+                      video.loop = true;
+                      video.id = 'rick-video';
+                      const source = document.createElement('source');
+                      source.src = 'https://cdn.mtdv.me/video/rick.mp4';
+                      source.type = 'video/mp4';
+                      video.appendChild(source);
+                      document.body.appendChild(video);
+                      video.play();
+      
+                      document.title = "Happy April Fools' Day!";
+                      });
+              </script>
+          </body>
+      </html>`;
+  
+      return new Response(html, {
+        headers: {
+          "content-type": "text/html;charset=UTF-8",
+        },
+      });
+    },
+  };
